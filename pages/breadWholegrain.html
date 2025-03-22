@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="header">
-        <h1 onclick="window.location.href='./index.html'">Sweet Delights Bakery</h1>
+        <div class="header-content">
+            <img src="../assets/logo.ico" alt="Sweet Delights Logo" class="logo" onclick="window.location.href='./index.html'">
+            <h1 onclick="window.location.href='./index.html'">Sweet Delights Bakery</h1>
+        </div>
     </div>
            
     <nav class="navbar">
-        <a href="./index.html">Home</a>
+        <a href="./history.html">History</a>
         <a href="./bread.html">Breads</a>
         <a href="./croissant.html">Croissants</a>
         <a href="./pastries.html">Pastries</a>
@@ -53,7 +56,25 @@
         </div>
     </div>
     <div class="footer">
-        <p>2025 Sweet Delights Bakery | Made with ❤️</p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@sweetdelights.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Bakery St, Sweet City</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com" target="_blank"><img src="../assets/icons/facebook.png" alt="Facebook" class="social-icon small-social"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../assets/icons/instagram.png" alt="Instagram" class="social-icon small-social"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="../assets/icons/X.png" alt="X" class="social-icon small-social"></a>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="./index.html">Home</a> | <a href="./contact.html">Contact</a> | <a href="./history.html">About Us</a></p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 Sweet Delights Bakery | Made with ❤️</p>
     </div>
 </body>
 </html>
