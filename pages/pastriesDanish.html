@@ -10,7 +10,16 @@
 <body>
     <div class="header">
         <h1 onclick="window.location.href='./index.html'">Sweet Delights Bakery</h1>
-    </div>
+    </div>  
+         
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./bread.html">Breads</a>
+        <a href="./croissant.html">Croissants</a>
+        <a href="./pastries.html">Pastries</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <div class="container">
         <h2>Danish Pastry</h2>
         <div class="recipe"> 
@@ -30,8 +39,11 @@
             <li>Fruit jam, custard, or almond paste for filling</li>
         </ul>
         
-        <h3>Order Now</h3>
-        <button class="order-button">Add to Cart</button>
+        <div class="order-section">
+            <h2>Order Danish Pastrie</h2>
+            <p>Price: $6.00</p>
+            <button onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
     </div>
     <div class="footer">
         <p>2025 Sweet Delights Bakery | Made with ❤️</p>
