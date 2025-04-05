@@ -4,28 +4,7 @@ Welcome to the Sweet Delights Bakery website! This project is a responsive and a
 
 ## 📂 Project Structure
 
-sweet-delights-bakery/
-├── index.html
-├── pages/
-│   ├── contact.html
-│   ├── history.html
-│   ├── bread.html
-│   ├── croissant.html
-│   ├── pastries.html
-│   └── order.html
-├── assets/
-│   ├── logo.ico
-│   ├── contact-hero.jpg
-│   ├── icons/
-│   │   ├── facebook.png
-│   │   ├── instagram.png
-│   │   └── X.png
-│   └── [other images]
-├── styles/
-│   └── styles.css
-├── scripts/
-│   └── script.js
-└── README.md
+sweet-delights-bakery/ ├── index.html ├── pages/ │ ├── contact.html │ ├── history.html │ ├── bread.html │ ├── croissant.html │ ├── pastries.html │ └── order.html ├── assets/ │ ├── logo.ico │ ├── contact-hero.jpg │ ├── icons/ │ │ ├── facebook.png │ │ ├── instagram.png │ │ └── X.png │ └── [other images] ├── styles/ │ └── styles.css ├── scripts/ │ └── script.js └── README.md
 
 ## 🌐 Features
 
