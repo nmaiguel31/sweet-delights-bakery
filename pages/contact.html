@@ -6,28 +6,47 @@
     <title>Contact | Sweet Delights Bakery</title>
     <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css/styles.css">
+    <script src="../scripts/script.js"></script>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
             <img src="../assets/logo.ico" alt="Sweet Delights Logo" class="logo" onclick="window.location.href='../index.html'">
-            <h1 onclick="window.location.href='../index.html'">Sweet Delights Bakery</h1>
+            <h1><a href="../index.html" class="header-link">Sweet Delights Bakery</a></h1>
         </div>
     </div>
     
     <nav class="navbar">
-        <a href="./history.html">History</a>
-        <a href="./bread.html">Breads</a>
-        <a href="./croissant.html">Croissants</a>
-        <a href="./pastries.html">Pastries</a>
-        <a href="./contact.html">Contact</a>
-    </nav>
+        <div class="nav-container">
+          <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+          <div class="nav-links">
+            <a href="./history.html">History</a>
+            <a href="./bread.html">Breads</a>
+            <a href="./croissant.html">Croissants</a>
+            <a href="./pastries.html">Pastries</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./order.html">Events</a>
+          </div>
+        </div>
+    </nav>      
     
+    <div class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Dont miss out on our new products and learn when are we making new discounts!</p>
+        <form id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p id="subscribe-message" style="display:none; color: green;">Thank you for subscribing!</p>
+          
+    </div>
+    
+
     <div class="container">
-        <h2>Contact Us</h2>
+        <h3>Contact Us</h3>
         <p>For questions, delivery or more information, you can contact us on the following methods:</p>
         
-        <h3>Phone</h3>
+        <h4>Phone</h4>
         <ul>
             <li>Main: (123) 456-7890</li>
             <li>Hannover: 1233324 – 1233325</li>
@@ -36,7 +55,7 @@
             <li>Rome: 1233325</li>
         </ul>
         
-        <h3>Address</h3>
+        <h4>Address</h4>
         <ul>
             <li>Main: 123 Bakery St, Dessert City, DC 45678</li>
             <li>Hannover: 123 Bakery St, Hannover, DC 45678</li>
@@ -45,16 +64,16 @@
             <li>Rome: 123 Bakery St, Rome, DC 45678</li>
         </ul>
         
-        <h3>Opening Hours</h3>
+        <h4>Opening Hours</h4>
         <ul>
             <li>Monday to Saturday: 8:00 a.m. – 7:00 p.m.</li>
             <li>Sunday and Holidays: 8:00 a.m. – 6:00 p.m.</li>
         </ul>
         
-        <h3>Email</h3>
+        <h4>Email</h4>
         <p>contact@sweetdelights.com</p>
         
-        <h3>Contact Us</h3>
+        <h4>Contact Us</h4>
         <form action="enviar_consulta.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>

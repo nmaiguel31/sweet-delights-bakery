@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events | Sweet Delights Bakery</title>
+  <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../styles.css/styles.css" />
+  <script src="../scripts/script.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="header-content">
+      <img src="../assets/logo.ico" alt="Sweet Delights Logo" class="logo" onclick="window.location.href='../index.html'">
+      <h1><a href="../index.html" class="header-link">Sweet Delights Bakery</a></h1>
+    </div>
+  </div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <div class="nav-links">
+      <a href="./history.html">History</a>
+      <a href="./bread.html">Breads</a>
+      <a href="./croissant.html">Croissants</a>
+      <a href="./pastries.html">Pastries</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./order.html">Events</a>
+    </div>
+  </div>
+</nav>
+
+
+  <section class="hero">
+    <div class="hero-content">
+        <h2>Events</h2>
+        <p>Freshly baked happiness, delivered for your big event!.</p>
+    </div>
+</section>
+
+
+  <div class="container">
+    <h2>Place an order for an event</h2>
+    <p>Order your favorite baked goods with just a click!</p>
+    
+    <form id="orderForm">
+        <h3>Breads</h3>
+        <label>
+            <input type="checkbox" name="products" value="Baguette" onchange="toggleQuantity(this)">
+            Classic Bread
+            <input type="number" name="Baguette_qty" min="1" value="1" disabled>
+          </label><br>
+
+        <label>
+          <input type="checkbox" name="products" value="Baguette" onchange="toggleQuantity(this)">
+          Whole Grain Bread
+          <input type="number" name="Baguette_qty" min="1" value="1" disabled>
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="products" value="Baguette" onchange="toggleQuantity(this)">
+            Sourdough Bread
+            <input type="number" name="Baguette_qty" min="1" value="1" disabled>
+          </label><br>
+
+        <label>
+          <input type="checkbox" name="products" value="Baguette" onchange="toggleQuantity(this)">
+         French Baguette
+          <input type="number" name="Baguette_qty" min="1" value="1" disabled>
+        </label><br>
+      
+        <h3>Pastries</h3>
+        <label>
+          <input type="checkbox" name="products" value="Chocolate Pastry" onchange="toggleQuantity(this)">
+          Chocolate Pastry
+          <input type="number" name="Chocolate Pastry_qty" min="1" value="1" disabled>
+        </label><br>
+      
+        <label>
+          <input type="checkbox" name="products" value="Strawberry Tart" onchange="toggleQuantity(this)">
+          Fruit Tart
+          <input type="number" name="Strawberry Tart_qty" min="1" value="1" disabled>
+        </label><br>
+      
+        <label>
+            <input type="checkbox" name="products" value="Strawberry Tart" onchange="toggleQuantity(this)">
+            Danish Pastry
+            <input type="number" name="Strawberry Tart_qty" min="1" value="1" disabled>
+          </label><br>
+
+        <h3>Croissants</h3>
+        <label>
+          <input type="checkbox" name="products" value="Butter Croissant" onchange="toggleQuantity(this)">
+          Classic Croissant
+          <input type="number" name="Butter Croissant_qty" min="1" value="1" disabled>
+        </label><br>
+      
+        <label>
+            <input type="checkbox" name="products" value="Butter Croissant" onchange="toggleQuantity(this)">
+            Chocolate Croissant
+            <input type="number" name="Butter Croissant_qty" min="1" value="1" disabled>
+          </label><br>
+        
+        <label>
+          <input type="checkbox" name="products" value="Almond Croissant" onchange="toggleQuantity(this)">
+          Almond Croissant
+          <input type="number" name="Almond Croissant_qty" min="1" value="1" disabled>
+        </label><br>
+      
+        <h3>Your Details</h3>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Address: <input type="text" name="address" required></label><br><br>
+      
+        <button type="submit">Submit Order</button>
+      
+        <p id="order-success" style="display: none; color: green;">Thank you! Your order has been received.</p>
+      </form>
+      
+      
+
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: info@sweetdelights.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Bakery St, Sweet City</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com" target="_blank"><img src="../assets/icons/facebook.png" alt="Facebook" class="social-icon small-social"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../assets/icons/instagram.png" alt="Instagram" class="social-icon small-social"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="../assets/icons/X.png" alt="X" class="social-icon small-social"></a>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <p><a href="../index.html">Home</a> | <a href="./contact.html">Contact</a> | <a href="./history.html">About Us</a></p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 Sweet Delights Bakery | Made with ❤️</p>
+  </div>
+</body>
+</html>

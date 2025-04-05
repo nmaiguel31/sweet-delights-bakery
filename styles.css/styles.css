@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+  
 /* Header */
 .header {
     background-color: #fff;
@@ -14,6 +15,15 @@ body {
     text-align: center;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .header-link:focus {
+    outline: 2px solid #8B4513; 
+  }
+
 .header h1 {
     cursor: pointer;
     color: #8B4513;
@@ -23,20 +33,80 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #8B4513;
-    padding: 10px;
-    text-align: center;
-}
-.navbar a {
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 18px;
     font-weight: 500;
-}
-.navbar a:hover {
+  }
+  
+  .nav-links a:hover {
     text-decoration: underline;
-}
-
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 769px) {
+    .nav-container {
+      justify-content: center;
+    }
+  
+    .menu-toggle {
+      display: none;
+    }
+  }
+  /* Responsive navbar */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #8B4513;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a {
+      color: white;
+      padding: 0.5rem 0;
+    }
+  }
+  
 /* Container */
 .container {
     width: 90%;
@@ -96,41 +166,442 @@ body {
     margin: 10px 0;
     font-size: 20px;
     color: #8B4513;
-}
-.product p {
+  }
+  .product p {
     color: #666;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    font-weight: 400;
-}
-
-.about-img, .team-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.header-content {
+  }
+  
+  /* Hero banner Main */
+  
+  .hero-main {
+    background-image: url('../assets/history/sweet-delights.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
     display: flex;
     align-items: center;
-    gap: 37%;
+    justify-content: center;
+    position: relative;
+    color: #fcefe6;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-main {
+      height: 300px;
+      padding: 20px;
+  }
+  
+  .hero-main h2 {
+      font-size: 1.8rem;
+  }
+  
+  .hero-main p {
+      font-size: 1rem;
+  }
+  
+  .hero-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
 }
 
-.logo {
-    height: 70px;
-    cursor: pointer;
+@media screen and (max-width: 480px) {
+  .hero-main {
+      height: 250px;
+      padding: 15px;
+  }
+  
+  .hero-main h2 {
+      font-size: 1.5rem;
+  }
+  
+  .hero-main p {
+      font-size: 0.9rem;
+  }
+  
+  .hero-button {
+      padding: 6px 14px;
+      font-size: 0.85rem;
+  }
+} main
+
+.hero-content p {
+  font-size: 1.2rem;
 }
 
-.small-social {
-    width: 24px;
-    height: 24px;
+
+/* Hero banner History */
+
+.hero-banner {
+    background-image: url('../assets/history/hero-bakery.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fcefe6;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  }
+  
+  .hero-text {
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-banner {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    .hero-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-banner p {
+        font-size: 1rem;
+    }
+    
+    .hero-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    .hero-banner {
+        height: 250px;
+        padding: 15px;
+    }
+    
+    .hero-banner h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-button {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+}  
+  
+  /* body and stuff */
+  
+  .cta-section {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fcefe6;
+      margin-top: 3rem;
+      border-radius: 12px;
+    }
+    
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        background-color: #d2691e;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        background-color: #a0522d;
+    }
+    
+    .newsletter {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 0.5rem;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .newsletter button {
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: #8B4513;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 0.5rem;
+    }
+    
+    .newsletter button:hover {
+        background-color: #ca6822;
+    }
+    
+    .about-section, .team-section {
+        background-color: #fcefe6;
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+    }
+
+    /* testimonials */
+
+.carousel-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fdf6f0;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-container h2 {
+  font-size: 28px;
+  color: #8B4513;
+  margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+}
+
+.testimonial {
+  display: none;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fade 0.5s ease-in-out;
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-buttons {
+  margin-top: 20px;
+}
+
+.carousel-buttons button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: #A0522D;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+    /* animations */
+
+    html {
+        scroll-behavior: smooth;
+      }
+      
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      button, .navbar a {
+        transition: all 0.3s ease;
+      }
+      
+      button:hover, .navbar a:hover {
+        transform: scale(1.05);
+        background-color: #A0522D; 
+      }
+      
+    /* order page */
+    
+    .orderForm {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 2rem auto;
+        gap: 1rem;
+    }
+    
+    .orderForm input,
+    .orderForm select,
+    .orderForm button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    
+    .orderForm button {
+        background-color: #d2691e;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .orderForm button:hover {
+        background-color: #a0522d;
+    }
+    
+    form h3 {
+        margin-top: 20px;
+        color: #6b4f3b;
+    }
+    
+    form label {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .hero {
+        background-image: url('../assets/history/event.jpg'); /* Replace with your actual hero image path */
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+    }
+    
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-button {
+        padding: 10px 20px;
+        background-color: #f57c00;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .hero {
+            height: 300px;
+            padding: 20px;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+        }
+        
+        .hero-button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .hero {
+            height: 250px;
+            padding: 15px;
+        }
+        
+        .hero h2 {
+            font-size: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 0.9rem;
+        }
+        
+        .hero-button {
+            padding: 6px 14px;
+            font-size: 0.85rem;
+        }
+    }
+    
+    /* Footer */
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        font-weight: 400;
+    }
+    
+    .about-img, .team-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 37%;
+    }
+    
+    .logo {
+        height: 70px;
+        cursor: pointer;
+    }
+    
+    .small-social {
+        width: 24px;
+        height: 24px;
+    }
+    

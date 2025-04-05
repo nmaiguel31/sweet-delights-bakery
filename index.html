@@ -6,48 +6,89 @@
         <title>Sweet Delights Bakery | Home</title>
         <link rel="shortcut icon" href="./assets/logo.ico" type="image/x-icon">
         <link rel="stylesheet" href="./styles.css/styles.css">
+        <script src="./scripts/script.js"></script>
+</body>
+
     </head>
     <body>
         <div class="header">
             <div class="header-content">
                 <img src="./assets/logo.ico" alt="Sweet Delights Logo" class="logo" onclick="window.location.href='./index.html'">
-                <h1 onclick="window.location.href='./index.html'">Sweet Delights Bakery</h1>
+                <h1><a href="index.html" class="header-link">Sweet Delights Bakery</a></h1>
             </div>
         </div>
         
         <nav class="navbar">
-            <a href="./pages/history.html">History</a>
-            <a href="./pages/bread.html">Breads</a>
-            <a href="./pages/croissant.html">Croissants</a>
-            <a href="./pages/pastries.html">Pastries</a>
-            <a href="./pages/contact.html">Contact</a>
+            <div class="nav-container">
+              <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+              <div class="nav-links">
+                <a href="./pages/history.html">History</a>
+                <a href="./pages/bread.html">Breads</a>
+                <a href="./pages/croissant.html">Croissants</a>
+                <a href="./pages/pastries.html">Pastries</a>
+                <a href="./pages/contact.html">Contact</a>
+                <a href="./pages/order.html">Events</a>
+              </div>
+            </div>
         </nav>
-        <div class="container">
-            <h2>Our Products</h2>
-            <div class="products">
+
+        <section class="hero-main">
+            <div class="hero-text">
+                <h2>Sweet Delights Bakery</h2>
+                <p>Our passion is your Delight</p>
+            </div>
+        </section>
+        
+        <div class="container fade-in">
+              <h2>Our Products</h2>
+              <div class="products" >
                 <div class="product">
+                    
                     <a href="./pages/bread.html">
-                        <img src="./assets/bread.jpeg" alt="Fresh Bread">
+                        <img src="./assets/bread.jpeg" alt="Freshly baked Bread">
                     </a>
                     <h3>Fresh Bread</h3>
                     <p>Crunchy, warm, and made daily.</p>
                 </div>
                 <div class="product">
                     <a href="./pages/croissant.html">
-                        <img src="./assets/croissant.jpeg" alt="Croissants">
+                        <img src="./assets/croissant.jpeg" alt="Rich and fluffy Croissants">
                     </a>
                     <h3>Buttery Croissants</h3>
                     <p>Flaky and rich with a perfect golden crust.</p>
                 </div>
                 <div class="product">
                     <a href="./pages/pastries.html">
-                        <img src="./assets/pastries.jpg" alt="Pastries">
+                        <img src="./assets/pastries.jpg" alt="Sweet and light Pastries">
                     </a>
                     <h3>Sweet Pastries</h3>
                     <p>Freshly baked with love and natural ingredients.</p>
                 </div>
             </div>
         </div>
+
+        <div class="carousel-container fade-in">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-carousel">
+              <div class="testimonial active">
+                <p>"The best croissants I've ever tasted! The staff is always friendly."</p>
+                <h4>- Maria G.</h4>
+              </div>
+              <div class="testimonial">
+                <p>"Sweet Delights made my wedding cake, and it was stunning and delicious!"</p>
+                <h4>- Luca R.</h4>
+              </div>
+              <div class="testimonial">
+                <p>"Fresh breads every morning—my daily breakfast stop."</p>
+                <h4>- Helena S.</h4>
+              </div>
+            </div>
+            <div class="carousel-buttons">
+              <button id="prev">&#10094;</button>
+              <button id="next">&#10095;</button>
+            </div>
+          </div>
+           
         <div class="footer">
             <div class="footer-container">
                 <div class="footer-section">
